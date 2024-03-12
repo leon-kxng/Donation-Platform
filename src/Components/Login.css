@@ -1,0 +1,49 @@
+/* login.css */
+
+/* Styles for the Login page */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .password-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .password-input span {
+    cursor: pointer;
+    margin-left: 5px;
+    display: inline-block;
+  }
+  
+  .forgot-password {
+    color: #28a745; /* Green color */
+    margin-top: 10px;
+  }
+  
+  button {
+    width: 150px; /* Set the width to your desired size */
+    padding: 12px;
+    background-color: green; /* Green button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+  }
+  
+  .register-link {
+    color: #28a745; /* Green color */
+    margin-top: 15px;
+  }
+  
+
