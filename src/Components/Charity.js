@@ -1,6 +1,5 @@
 
 import React from 'react';
-import './Donations.css'
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -10,6 +9,7 @@ import { FaChartSimple, FaRegStar, FaRegCircleUser } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 // import { useState } from 'react';
 // import ContinueButton from './Continue';
+import './Charity.css'
 
 
 
@@ -131,4 +131,4 @@ Share
   </>
   );
 }
-export default Donations;
+export default Charity;
