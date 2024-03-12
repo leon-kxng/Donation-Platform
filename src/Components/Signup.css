@@ -1,6 +1,4 @@
-/* signup.css */
 
-/* Styles for the Signup page */
 form {
     display: flex;
     flex-direction: column;
@@ -24,7 +22,7 @@ form {
   }
   
   button {
-    width: 150px; /* Set the width to your desired size */
+    width: 150px;
     padding: 12px;
     background-color: green; /* Green button */
     color: #fff;

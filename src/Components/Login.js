@@ -1,4 +1,4 @@
-// src/components/Login.js
+
 import React, { useState } from 'react';
 import './Login.css';
 const Login = () => {
@@ -7,7 +7,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
-    // Replace this with actual login logic
+    
     console.log('Logging in with:', email, password);
   };
 

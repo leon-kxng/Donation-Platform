@@ -1,4 +1,3 @@
-// src/components/Signup.js
 import React, { useState } from 'react';
 import './Signup.css';
 
@@ -10,7 +9,7 @@ const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSignup = () => {
-    // Replace this with actual signup logic
+   
     console.log('Signing up with:', username, email, password, confirmPassword);
   };
 
