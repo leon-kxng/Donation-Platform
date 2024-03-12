@@ -4,6 +4,8 @@ import Footer from './Components/Footer';
 import Login from './Components/Login';
 import Signup from './Components/Signup'; 
 import './App.css';
+import About from './Components/About';
+import Charity from './Components/Charity';
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
@@ -25,6 +27,8 @@ function App() {
           </span>
         </p>
       </div>
+      <About/>
+      <Charity/>
       <Footer />
     </div>
   );
