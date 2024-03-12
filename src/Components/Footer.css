@@ -110,9 +110,18 @@
 
 .footer-row {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-row p {
     color: grey;
     text-align: center;
+}
+
+.footer-handles {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
 }
