@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaFacebookSquare, FaYoutube, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import './Footer.css';
 
 function Footer() {
@@ -89,7 +89,15 @@ function Footer() {
             </div>
 
             <div className="footer-row">
-                <p className="copyright-text">Copyright © 2024 initTheme. All rights reserved.</p>
+                <p className="copyright-text">
+                    Copyright © 2024 initTheme. All rights reserved.
+                </p>
+                <div className="footer-handles">
+                    <FaFacebookSquare />
+                    <FaYoutube />
+                    <FaInstagramSquare />
+                    <FaLinkedin />
+                </div>
             </div>
         </div>
 
