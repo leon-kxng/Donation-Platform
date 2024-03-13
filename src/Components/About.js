@@ -1,20 +1,61 @@
 import React from 'react';
+import './About.css'; // Import your CSS file
 
+import image4 from './images/image4.jpg';
+import image5 from './images/image5.jpeg';
+import image6 from './images/image6.jpeg';
+
+// Testimonials data
+const testimonials = [
+    {
+        id: 1,
+        name: 'Rock Johnson',
+        testimonial: 'I love using this app! It has greatly improved my productivity and organization. Highly recommended!',
+        image: image4, 
+    },
+    {
+        id: 2,
+        name: 'Barack Obama',
+        testimonial: 'This app has made donation much easier! Thank you so much for creating it.' ,
+        image: image5,
+    },
+    {
+        id: 3,
+        name: 'Chris Brown',
+        testimonial: 'C"Streamlined, impactful, empowering. Best app for making meaningful contributions easily.".',
+        image: image6,
+    },
+];
+
+const Testimonials = () => {
+    return (
+        <div className="testimonials-container">
+            {testimonials.map(testimonial => (
+                <div key={testimonial.id} className="testimonial">
+                    <div className="testimonial-content">
+                        <img className="testimonial-image" src={testimonial.image} alt={testimonial.name} />
+                        <p className="testimonial-text">"{testimonial.testimonial}"</p>
+                        <p className="testimonial-author">- {testimonial.name}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+};
 
 const About = () => {
   return (
     <>
-     
       <div className="container my-3 py-3">
         <h1 className="text-center">About Us</h1>
         <hr />
         <p className="lead text-center">
-        At Onation, we believe in the transformative power of giving.
-        Our platform serves as a bridge between those who are passionate about making a difference
-        and the causes that need their support.
-        Whether you're driven by a desire to alleviate hunger, champion education, protect the environment,
-        or uplift communities in need, Onation provides
-        the perfect avenue to turn your generosity into meaningful impact.
+          At Onation, we believe in the transformative power of giving.
+          Our platform serves as a bridge between those who are passionate about making a difference
+          and the causes that need their support.
+          Whether you're driven by a desire to alleviate hunger, champion education, protect the environment,
+          or uplift communities in need, Onation provides
+          the perfect avenue to turn your generosity into meaningful impact.
         </p>
 
         <h2 className="text-center py-4">About Us</h2>
@@ -52,10 +93,11 @@ const About = () => {
             </div>
           </div>
         </div>
+        {/* Include the Testimonials component */}
+        <Testimonials />
       </div>
-      
     </>
-  )
-}
+  );
+};
 
 export default About;
