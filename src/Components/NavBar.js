@@ -15,12 +15,12 @@ function Navbar() {
         {/* Navbar links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
-            <a className="nav-link" href="#">Home <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">About <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/">Home <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/about">About <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Donation <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Blog <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Pages <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">Contact <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/contactUs">Contact Us <span className="arrow">&darr;</span></a>
           </ul>
         </div>
         

@@ -1,15 +1,27 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/NavBar';
 import Footer from './Components/Footer';
+import HomePage from './Components/HomePage';
+import About from './Components/About';
+import CharityPage from './Components/CharityPage'
+
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      {/* Kenye you guys will add */}
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/charityPage" element={<CharityPage />} />
+         
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

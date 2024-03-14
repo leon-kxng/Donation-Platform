@@ -6,6 +6,17 @@ import './Footer.css';
 
 function Footer() {
   return (
+    <div>
+    <div className="image-list-container">
+        <img src="image1.jpg" alt="Image 1" className="image" />
+        <img src="image2.jpg" alt="Image 2" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        {/* Add more images as needed */}
+    </div>
     <div className="footer">
         <div className="main-footer">
             <div className="footer-header">
@@ -67,7 +78,7 @@ function Footer() {
                 <div className="projects-container">
                         <div className="projects-item">
                             <div className="projects-image">
-                                <img src="https://shorturl.at/ioUV3" alt="projects-image" />
+                                <img src="https://shorturl.at/ioUV3" alt="projects" />
                             </div>
                             <div className="projects-details">
                                 <p style={{color: 'orange'}}>12.Oct.2024</p>
@@ -101,6 +112,7 @@ function Footer() {
             </div>
         </div>
 
+    </div>
     </div>
   )
 }
