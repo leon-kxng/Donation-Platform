@@ -1,0 +1,284 @@
+/* CharityPage.css */
+
+.charity-page-container {
+  max-width: 800px;
+  /* margin: 0 auto; */
+  margin-left: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Adjust alignment as needed */
+  
+}
+
+.page-title {
+  text-align: center;
+  color: #333;
+}
+
+.charity-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  flex: 0 0 100%; /* Adjust width as needed */
+}
+
+.charity-image-container {
+  margin-bottom: 20px;
+}
+
+.charity-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.charity-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.organizer-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.organizer-name {
+  color: #555;
+  margin: 0;
+}
+
+.creation-date {
+  color: #777;
+  margin: 0;
+}
+
+.charity-description p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.donation-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 0 0 80%; /* Adjust width as needed */
+  margin-left: 100px;
+}
+
+.donation-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.donation-status {
+  font-size: 18px;
+  color: #666;
+}
+
+.custom-progress-bar {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.donate-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.donate-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.donation-note {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 20px;
+}
+
+.donation-perks {
+  margin-top: 20px;
+}
+
+.donation-perks li {
+  font-size: 16px;
+  color: #666;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.donation-options {
+  margin-top: 20px;
+}
+
+.donation-options-heading {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.donation-options-list {
+  margin-top: 10px;
+}
+
+.donation-options-list li {
+  font-size: 16px;
+  color: #666;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.contact-info-container, .message-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-heading, .message-heading {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.contact-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.message {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-date {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  color: #333;
+}
+
+
+.contact-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  /* margin: 0 auto; */
+  margin-left: 540px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  border-top: 6px solid;
+}
+
+.contact-card h2 {
+  margin-top: 0;
+  color: #007bff;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info .icon {
+  margin-right: 10px;
+  color: #00715D;
+}
+
+.message {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.message p {
+  margin: 10px 0;
+}
+
+.user-message textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-message button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.user-message button:hover {
+  background-color: #0056b3;
+}
