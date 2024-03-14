@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
 import { RiShareForwardFill } from "react-icons/ri";
@@ -8,6 +9,12 @@ const CharityCard = () => {
   // Sample data for demonstration
   const goalAmount = 40000;
   const raisedAmount = 23404;
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+  navigate('/charityPage');
+  };
+
 
   // Calculate the percentage of the goal achieved
   const progressPercentage = (raisedAmount / goalAmount) * 100;
@@ -27,8 +34,8 @@ const CharityCard = () => {
   }, [progressPercentage]);
 
   return (
-    <div className="unique-charity-card"> {/* Updated class name */}
-      <img src="https://qph.cf2.quoracdn.net/main-qimg-9999e7cbd7d84e36c1021800fb6819f8-lq" className="card-img-top" alt="Card"/>
+    <div className="unique-charity-card" onClick={handleClick}> {/* Updated class name */}
+      <img src="https://qph.cf2.quoracdn.net/main-qimg-9999e7cbd7d84e36c1021800fb6819f8-lq" className="card-img-top" alt="Card" onClick={handleClick}/>
       <div className="card-body">
         <p className="card-text h5">Lorem Ipsum</p>
         <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -52,7 +59,7 @@ const CharityCard = () => {
           </p>
           <RiShareForwardFill className="share"/>
         </div>
-        <Button variant="primary" className="mt-3">
+        <Button variant="primary" className="mt-3" onClick={handleClick}>
           Donate Now
         </Button>
       </div>
