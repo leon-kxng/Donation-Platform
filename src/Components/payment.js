@@ -77,7 +77,7 @@ const Payment = ({ toggleModal }) => {
                   />
                 </div>
                 <button type="button" className="pay-button" onClick={pay}>
-                  Pay Now
+                  Donate
                 </button>
               </form>
               <button className="close-modal" onClick={toggleModal}>

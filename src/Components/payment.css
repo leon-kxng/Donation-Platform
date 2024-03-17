@@ -21,6 +21,11 @@
   .modal-content {
     text-align: center;
   }
+
+  .modal-content,
+  .modal-content * { /* This targets the modal-content and all its children */
+    border: none;
+  }
   
   h2 {
     color: #333;
@@ -28,7 +33,7 @@
   }
   
   .close-modal {
-    background-color: #f0ad4e;
+    background-color: #0056b3;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -48,7 +53,6 @@
   input {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
     border-radius: 5px;
     width: 80%;
   }
@@ -79,3 +83,4 @@
   .input-group {
     margin-bottom: 20px;
   }
+
