@@ -10,7 +10,7 @@ function Footer() {
         <div className="main-footer">
             <div className="footer-header">
                 <div className="logo-container">
-                    <img src="https://shorturl.at/yILN9" alt="Onation.jpg"/>
+                    <img src="https://shorturl.at/yILN9" alt="Donation"/>
                 </div>
 
                 <div className="footer-navlinks">
@@ -67,7 +67,7 @@ function Footer() {
                 <div className="projects-container">
                         <div className="projects-item">
                             <div className="projects-image">
-                                <img src="https://shorturl.at/ioUV3" alt="projects-image" />
+                                <img src="https://shorturl.at/ioUV3" alt="projects" />
                             </div>
                             <div className="projects-details">
                                 <p style={{color: 'orange'}}>12.Oct.2024</p>

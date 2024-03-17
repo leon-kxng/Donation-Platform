@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="#"><img src="https://shorturl.at/yILN9" alt="Onation.jpg"/></a>
+        <a className="navbar-brand" href="#"><img src="https://shorturl.at/yILN9" alt="Donation"/></a>
         
         
         {/* Navbar links */}
@@ -20,6 +20,8 @@ function Navbar() {
             <a className="nav-link" href="#">Donation <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Blog <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Pages <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="#">Form1 <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="#">Charity<span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Contact <span className="arrow">&darr;</span></a>
           </ul>
         </div>
