@@ -1,0 +1,103 @@
+.blog-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Spacing between columns */
+  }
+  
+  .blog-post {
+    width: 325px;
+    border-radius: 10px;
+    padding: 20px; /* Padding for the cards */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    position: relative; /* For absolute positioning */
+    margin: 20px;
+    overflow: hidden;
+  }
+  
+  .blog-image {
+    width: 100%; /* Ensure images fill the width of their containers */
+    height: 200px; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px; /* Apply border-radius to images */
+  }
+  
+  
+  .date {
+    position: absolute; /* Position at top-left corner */
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    color: #FFB840; /* Date color */
+    z-index: 1;
+  }
+  
+  .admin-message-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .admin-symbol,
+  .messaging-symbol {
+    width: 30px; /* Size of admin and messaging symbols */
+    height: 30px;
+    font-size: 24px; /* Adjust symbol size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Make it circular */
+    background-color: #267969; /* Symbol color */
+  }
+  
+  .messaging-symbol {
+    margin-left: 5px; /* Adjust spacing between admin symbol and messaging symbol */
+  }
+  
+  .admin-message {
+    margin-left: 10px;
+  }
+  
+  .donation-message {
+    margin-left: auto; /* Push to right side */
+  }
+  
+  .message {
+    margin-top: 20px; /* Spacing between image and message */
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 20px; /* Spacing between message and read more link */
+    padding: 8px 16px; /* Oval button padding */
+    border-radius: 20px; /* Oval button border-radius */
+    background-color: #267969; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
