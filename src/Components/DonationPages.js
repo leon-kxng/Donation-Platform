@@ -6,30 +6,43 @@ import './DonationPages.css';
 
 import CharityCard from './CharityCard';
 
-function DonationPages() { // Corrected component name to DonationPages
-  // Pagination state
+function DonationPages() {
   const [activePage, setActivePage] = useState(1);
-  const itemsPerPage = 6; // Number of items per page
-  const totalPages = Math.ceil(12 / itemsPerPage); // Total number of pages (assuming 12 items)
+  const itemsPerPage = 9;
+  const totalPages = Math.ceil(12 / itemsPerPage);
 
-  // Handle page change
   const handlePageChange = (page) => {
     setActivePage(page);
   };
 
-  // Calculate start and end indexes for current page
   const startIndex = (activePage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  // Generate CharityCard components for current page
   const charityCards = [];
   for (let i = startIndex; i < endIndex; i++) {
-    if (i < 12) { // Assuming there are 12 charity cards in total
+    if (i < 12) {
       charityCards.push(<CharityCard key={i} />);
     } else {
-      break; // Break if we reach the end of available cards
+      break;
     }
   }
+
+  const renderPaginationItems = () => {
+    const items = [];
+    for (let index = 1; index <= totalPages; index++) {
+      items.push(
+        <Pagination.Item
+          key={index}
+          active={index === activePage}
+          onClick={() => handlePageChange(index)}
+          activeLabel = ""
+        >
+          {index}
+        </Pagination.Item>
+      );
+    }
+    return items;
+  };
 
   return (
     <div className="donation-container">
@@ -39,23 +52,28 @@ function DonationPages() { // Corrected component name to DonationPages
       <div className="card-container">
         {charityCards}
       </div>
-      {/* Pagination */}
       <div className="pagination-container">
-        <Pagination>
-          {Array.from({ length: totalPages }, (_, index) => (
-            <Pagination.Item
-              key={index}
-              active={index + 1 === activePage}
-              onClick={() => handlePageChange(index + 1)}
-            >
-              {index + 1}
-            </Pagination.Item>
-          ))}
-        </Pagination>
+        <CustomPagination activePage={activePage} totalPages={totalPages} handlePageChange={handlePageChange} />
       </div>
     </div>
   );
 }
 
-export default DonationPages;
+const CustomPagination = ({ activePage, totalPages, handlePageChange }) => {
+  const items = [];
+  for (let index = 1; index <= totalPages; index++) {
+    items.push(
+      <Pagination.Item
+        key={index}
+        active={index === activePage}
+        onClick={() => handlePageChange(index)}
+        activeLabel = ""
+      >
+        {index}
+      </Pagination.Item>
+    );
+  }
+  return <Pagination>{items}</Pagination>;
+};
 
+export default DonationPages;

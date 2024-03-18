@@ -1,7 +1,6 @@
-/* UniqueCharityCard.css */ /* Updated file name */
-
-body .unique-charity-card { /* Increased specificity */
-  width: 360px; 
+/* Styles for the unique-charity-card class */
+.unique-charity-card {
+  width: 360px;
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
@@ -12,43 +11,53 @@ body .unique-charity-card { /* Increased specificity */
   border: 1px solid #CCCDD3;
   border-radius: 10px;
   cursor: pointer;
-  &:hover {
-    transform: scale(1.03);
-  }
 }
 
-body .unique-charity-card .card-img-top { /* Increased specificity */
+/* Hover effect */
+.unique-charity-card:hover {
+  transform: scale(1.03);
+}
+
+/* Styles for the card image */
+.unique-charity-card .card-img-top {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-body .unique-charity-card .card-body { /* Increased specificity */
+/* Styles for the card body */
+.unique-charity-card .card-body {
   padding: 20px;
 }
 
-body .unique-charity-card .card-text { /* Increased specificity */
+/* Styles for card text */
+.unique-charity-card .card-text {
   margin-bottom: 10px;
 }
 
-body .unique-charity-card .h5 { /* Increased specificity */
+/* Styles for heading */
+.unique-charity-card .h5 {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-body .unique-charity-card .custom-progress-bar { /* Increased specificity */
+/* Styles for custom progress bar */
+.unique-charity-card .custom-progress-bar {
   height: 20px;
 }
 
-body .unique-charity-card .d-flex { /* Increased specificity */
+/* Flexbox styles */
+.unique-charity-card .d-flex {
   display: flex;
 }
 
-body .unique-charity-card .justify-content-between { /* Increased specificity */
+/* Justify content between */
+.unique-charity-card .justify-content-between {
   justify-content: space-between;
 }
 
-body .unique-charity-card .btn-primary { /* Increased specificity */
+/* Styles for primary button */
+.unique-charity-card .btn-primary {
   background-color: #C7A2CD;
   border-color: #007bff;
   width: 300px;
@@ -57,15 +66,16 @@ body .unique-charity-card .btn-primary { /* Increased specificity */
   font-weight: bold;
 }
 
-body .unique-charity-card .btn-primary:hover { /* Increased specificity */
+/* Button hover effect */
+.unique-charity-card .btn-primary:hover {
   background-color: #151C36;
   border-color: #0056b3;
   color: white;
   font-weight: bold;
-
 }
 
-body .unique-charity-card .share { /* Increased specificity */
+/* Styles for share icon */
+.unique-charity-card .share {
   color: #00715D;
   border: 1px #00715D solid;
 }
