@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import HomePage from './Components/HomePage';
 import About from './Components/About';
 import CharityPage from './Components/CharityPage'
+import DonationPages from './Components/DonationPages'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/charityPage" element={<CharityPage />} />
+          <Route path='/Donation' element={<DonationPages />} />
          
         </Routes>
         <Footer />
