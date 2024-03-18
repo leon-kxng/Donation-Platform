@@ -1,10 +1,110 @@
 /* NavBar.css */
 .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1500px;
+  margin: 0 auto;    
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  max-width: 1300px; /* Set max-width here */
+  margin: 0 auto; /* Center the container */
+}
+
+.navbar-brand {
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 50px;
+  position: relative;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.nav-link:last-child {
+  margin-right: 180px; /* Remove margin from the last link */
+}
+
+.nav-link:hover {
+  color: #00715D;
+  text-decoration: underline 3px;
+}
+
+.user-profile-icon {
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.user-profile-icon:hover {
+  cursor: pointer;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  margin-right: 10px; /* Adjusted margin for buttons */
+}
+
+.btn-success {
+  width: 60px; /* Adjusted width for success button */
+  height: 50px;  
+  background-color: #FFB840;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: orange; 
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 120px; /* Adjusted width for primary button */
+  height: 50px;   
+  background: #00715D;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+.navbar-brand img {
+  position: relative;
+  width: 240px;
+  mix-blend-mode: normal;
+  border-radius: 5px;
+}
+
+.arrow {
+  position: absolute;
+  right: -10px;
+  top: 50%;/* NavBar.css */
+  .navbar {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 1500px;
     margin: 0 auto;    
-    
   }
   
   .container {
@@ -29,99 +129,90 @@
     color: #333;
     font-weight: 500;
     text-decoration: none;
-    margin-right: 50px;
+    margin-right: 20px; /* Adjusted margin for nav links */
     position: relative;
     transition: color 0.3s;
     font-size: 20px;
   }
   
+  .nav-link:last-child {
+    margin-right: 0; /* Remove margin from the last nav link */
+  }
+  
   .nav-link:hover {
     color: #00715D;
     text-decoration: underline 3px;
-
   }
   
   .user-profile-icon {
     font-size: 1.8rem;
     margin-left: 10px;
   }
-
+  
   .user-profile-icon:hover {
     cursor: pointer;
-    
   }
   
   .btn {
-    margin-right: 17px;          
+    margin-right: 150px; /* Adjusted margin for buttons */
   }
   
   .btn-success {
-    /* position: absolute; */
-    width: 50px;
+    width: 60px; /* Adjusted width for success button */
     height: 50px;  
     background-color: #FFB840;
     border-radius: 25px;
     transition: background-color 0.3s;
     color: white;
-
   }
-
+  
   .btn-success:hover {
     background-color: orange; 
-    cursor:pointer;
+    cursor: pointer;
   }
-
+  
   .btn-primary {
-    /* position: absolute; */
-    width: 99.19px;
+    width: 120px; /* Adjusted width for primary button */
     height: 50px;   
     background: #00715D;
     border-radius: 50px;
     transition: background-color 0.3s;
     color: white;
   }
-
+  
   .btn-primary:hover {
     background-color: green;
-    cursor:pointer;
+    cursor: pointer;
   }
-
+  
   .navbar-brand img {
     position: relative;
-    width: 120px;
+    width: 240px;
     mix-blend-mode: normal;
-    border-radius: 18px;
-
+    border-radius: 5px;
   }
-
-
-
-
+  
   .arrow {
     position: absolute;
-    right: -10px;
+    right: -5px;
     top: 50%;
     transform: translateY(-50%);
     opacity: 0;
     transition: opacity 0.3s ease;
-    /* font-size: 30px;
-    margin-left: 1.2rem */
   }
   
   .nav-link:hover .arrow {
     opacity: 1;
   }
-
-
+  
   .navbar-toggler {
     font-size: 25px;
     border-radius: 10px;
     padding: 5px;
     background-color: #00715D;
     color: orange;
-
   }
-
+  
   .navbar-toggler:hover {
     cursor: pointer;
   }
@@ -135,15 +226,196 @@
     .navbar-nav {
       margin-right: 0;
     }
-
+  
     .navbar-toggler {
-        display: none;
-      }
+      display: none;
+    }
   }
-
+  
   @media (max-width: 1100px) {
     .navbar-buttons {
       display: none;
     }
   }
   
+  
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover .arrow {
+  opacity: 1;
+}
+
+.navbar-toggler {
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #00715D;
+  color: orange;
+}
+
+.navbar-toggler:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1100px) {/* NavBar.css */
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    margin: 0 auto;    
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: 1300px; /* Set max-width here */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .navbar-brand {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    display: flex;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 20px; /* Adjusted margin for nav links */
+    position: relative;
+    transition: color 0.3s;
+    font-size: 20px;
+  }
+  
+  .nav-link:last-child {
+    margin-right: 10px; /* Remove margin from the last nav link */
+  }
+  
+  .nav-link:hover {
+    color: #00715D;
+    text-decoration: underline 3px;
+  }
+  
+  .user-profile-icon {
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+  
+  .user-profile-icon:hover {
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin-right: 140px; /* Adjusted margin for buttons */
+  }
+  
+  .btn-success {
+    width: 60px; /* Adjusted width for success button */
+    height: 50px;  
+    background-color: #FFB840;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background-color: orange; 
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    width: 120px; /* Adjusted width for primary button */
+    height: 50px;   
+    background: #00715D;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: green;
+    cursor: pointer;
+  }
+  
+  .navbar-brand img {
+    position: relative;
+    width: 240px;
+    mix-blend-mode: normal;
+    border-radius: 5px;
+  }
+  
+  .arrow {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-link:hover .arrow {
+    opacity: 1;
+  }
+  
+  .navbar-toggler {
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #00715D;
+    color: orange;
+  }
+  
+  .navbar-toggler:hover {
+    cursor: pointer;
+  }
+  
+  @media (min-width: 1100px) {
+    .container {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  
+    .navbar-nav {
+      margin-right: 0;
+    }
+  
+    .navbar-toggler {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .navbar-buttons {
+      display: none;
+    }
+  }
+  
+  
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .navbar-nav {
+    margin-right: 0;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar-buttons {
+    display: none;
+  }
+}

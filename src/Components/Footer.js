@@ -21,7 +21,7 @@ function Footer() {
         <div className="main-footer">
             <div className="footer-header">
                 <div className="logo-container">
-                    <img src="https://shorturl.at/yILN9" alt="Onation.jpg"/>
+                    <img src="/logo.png" alt="Onation.jpg"/>
                 </div>
 
                 <div className="footer-navlinks">
@@ -36,7 +36,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-donate">
-                    <button>Donate</button>
+                    {/* <button>Donate</button> */}
                 </div>
             </div>
 
