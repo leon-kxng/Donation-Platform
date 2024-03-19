@@ -60,6 +60,7 @@ function Footer() {
                         <a className="foot-link" href="#"><FaPhone /> (+88) 111-222-333</a>
                         <a className="foot-link" href="#"><FaMapMarkerAlt/> Tropical Cyclone, Volcano</a>                 
                     </div>
+                    
                 </div>
 
                 <div className="column-1">
