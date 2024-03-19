@@ -7,6 +7,7 @@ import HomePage from './Components/HomePage';
 import About from './Components/About';
 import CharityPage from './Components/CharityPage'
 import DonationPages from './Components/DonationPages'
+import BlogPage from './Components/BlogPage';
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/charityPage" element={<CharityPage />} />
           <Route path='/Donation' element={<DonationPages />} />
+          <Route path='/blog' element={<BlogPage />} />
+
          
         </Routes>
         <Footer />
