@@ -64,8 +64,3 @@ const Signup = () => {
 
 export default Signup;
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> main
