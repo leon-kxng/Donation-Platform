@@ -1,0 +1,148 @@
+/* Base page styles, assuming a full-width container */
+.main-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: space-between; /* Spacing between items */
+}
+
+.charity-page-container {
+  display: flex;
+  justify-content: center; /* Center the children */
+  flex-wrap: wrap; /* Allow the items to wrap as necessary */
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto; /* Center the container on the page */
+  padding: 20px;
+  gap: 20px; /* Spacing between children */
+}
+
+/* Styles for charity details card */
+.charity-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-basis: calc(66% - 20px); /* Adjust width, accounting for gap */
+  margin-bottom: 20px; /* Space between charity details and contact */
+
+}
+
+/* Styles for contact us card */
+.contact-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-basis: calc(66% - 20px);
+  margin-left: -26rem;
+  width: 100%;
+}
+
+/* Styles for donation card */
+.donation-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-basis: calc(33% - 20px); /* Adjust width, accounting for gap */
+  align-self: flex-start; /* Align to the top of the container */
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  color: #333;
+}
+
+/* Styles for other elements inside charity card */
+.charity-image-container {
+  margin-bottom: 20px;
+}
+
+.charity-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.charity-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.organizer-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.organizer-name {
+  color: #555;
+  margin: 0;
+}
+
+.creation-date {
+  color: #777;
+  margin: 0;
+}
+
+.charity-description p {
+  display: flex;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Styles for the donation card internals */
+.donation-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.donation-status {
+  font-size: 18px;
+  color: #666;
+}
+
+.custom-progress-bar {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.donate-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.donate-btn:hover {
+  background-color: #0056b3;
+}
+
+.donation-note, .donation-perks, .donation-options {
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.donation-perks li, .donation-options-list li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991px) {
+  .charity-page-container {
+    flex-direction: column;
+  }
+
+  .charity-card, .contact-card, .donation-card {
+    flex-basis: 100%;
+  }
+}

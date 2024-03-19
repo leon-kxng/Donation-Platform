@@ -41,7 +41,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .about-details {
@@ -188,13 +188,12 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 2px solid;
 }
 
 .company-logos img {
   width: 100px;
   height: 100px;
-  margin: 10px;
+  margin: 40px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
@@ -330,7 +329,7 @@ h3 {
   padding: 90px 48px 90px 271px;
   background: url("https://i.pinimg.com/236x/e7/aa/ca/e7aaca1ccc4a665ba4e92199bac58fba.jpg") no-repeat 50% / cover;
   background-color: #070b4dad; 
-  color: rgb(250, 246, 246); 
+  color: rgb(26, 14, 87); 
   font-size: 16px; 
   border-radius: 10px; 
   margin-bottom: 30px; 

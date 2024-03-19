@@ -6,11 +6,22 @@ import './Footer.css';
 
 function Footer() {
   return (
+    <div>
+    <div className="image-list-container">
+        <img src="image1.jpg" alt="Image 1" className="image" />
+        <img src="image2.jpg" alt="Image 2" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        <img src="image3.jpg" alt="Image 3" className="image" />
+        {/* Add more images as needed */}
+    </div>
     <div className="footer">
         <div className="main-footer">
             <div className="footer-header">
                 <div className="logo-container">
-                    <img src="https://shorturl.at/yILN9" alt="Onation.jpg"/>
+                    <img src="/logo.png" alt="Onation.jpg"/>
                 </div>
 
                 <div className="footer-navlinks">
@@ -25,7 +36,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-donate">
-                    <button>Donate</button>
+                    {/* <button>Donate</button> */}
                 </div>
             </div>
 
@@ -60,7 +71,6 @@ function Footer() {
                         <a className="foot-link" href="#"><FaPhone /> (+88) 111-222-333</a>
                         <a className="foot-link" href="#"><FaMapMarkerAlt/> Tropical Cyclone, Volcano</a>                 
                     </div>
-                    
                 </div>
 
                 <div className="column-1">
@@ -68,7 +78,7 @@ function Footer() {
                 <div className="projects-container">
                         <div className="projects-item">
                             <div className="projects-image">
-                                <img src="https://shorturl.at/ioUV3" alt="projects-image" />
+                                <img src="https://shorturl.at/ioUV3" alt="projects" />
                             </div>
                             <div className="projects-details">
                                 <p style={{color: 'orange'}}>12.Oct.2024</p>
@@ -103,8 +113,8 @@ function Footer() {
         </div>
 
     </div>
+    </div>
   )
 }
-
 
 export default Footer;

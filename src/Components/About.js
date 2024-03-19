@@ -7,6 +7,8 @@ import { FaUser } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa";
 import "./About.css";
 
+
+
 function About() {
   const companyLogos = [
     'https://example.com/logo1.png',

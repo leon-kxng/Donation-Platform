@@ -1,0 +1,28 @@
+/* DonationPages.css */
+
+
+.donation-container {
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for spacing */
+    border: none; /* Remove the border */
+    outline: none; /* Remove the outline */
+  }
+  
+  /* Message styling */
+  .donation-message {
+    font-size: 18px;
+    color: #333; /* Adjust text color */
+    margin-bottom: 20px; /* Add spacing below the message */
+  }
+  
+  /* Card container styling */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-gap: 20px; /* Gap between cards */
+  }
+  
+  /* Pagination container styling */
+  .pagination-container {
+    margin-top: 20px; /* Add spacing above pagination */
+  }

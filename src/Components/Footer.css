@@ -1,13 +1,31 @@
+.image-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    max-width: 1000px;
+    margin: 0 auto;  
+    margin-top: 60px;
+  }
+  
+  .image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
 .footer {
     background-color: #10013C;
     color: #fff;
     padding: 20px;
     font-family: Arial, sans-serif;
-    margin-top: 431px;
+    
 }
 
 .main-footer{
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -15,14 +33,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;    
-    font-size: 17px;
+    margin-bottom: 15px;    
+    font-size: 12px;
     border-bottom: 2px grey solid
 }
 
 .logo-container img {
-    width: 329px;
-    height: 120px;    
+    width: 200px;
+    /* height: 200px;     */
     mix-blend-mode: normal;  
     border-radius: 18px;  
 }
@@ -43,7 +61,7 @@
 .footer-donate button {
     background-color: #FFF500;
     color: black;
-    padding: 15px 25px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -67,7 +85,7 @@
 
 .column-head {
     color: #fff;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .foot-links {
@@ -79,6 +97,7 @@
     color: #fff;
     text-decoration: none;
     margin-bottom: 10px;
+    font-size: 12px;
 }
 
 .footer-body .foot-link {
@@ -106,6 +125,7 @@
 .projects-details p {
     margin: 0;
     color: #fff;
+    font-size: 12px;
 }
 
 .footer-row {

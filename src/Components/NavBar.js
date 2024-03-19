@@ -7,28 +7,33 @@ import './NavBar.css';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg ">
       <div className="container">
-        <a className="navbar-brand" href="#"><img src="https://shorturl.at/yILN9" alt="Onation.jpg"/></a>
+        <a className="navbar-brand" href="#"><img src="/logo.png" alt="Onation.png"/></a>
         
         
         {/* Navbar links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
-            <a className="nav-link" href="#">Home <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">About <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">Donation <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">Blog <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">Pages <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="#">Contact <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/">Home <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/about">About <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/donation">Donation <span className="arrow">&darr;</span></a>
+
+            <a className="nav-link" href="/blog">Blog <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="#">Pages <span className="arrow">&darr;</span></a>     
+
+             {/* <a className="nav-link" href="/blog">Blog <span className="arrow">&darr;</span></a> */}
+             <a className="nav-link" href="/blog">Blog <span className="arrow">&darr;</span></a>
+
+             <a className="nav-link" href="/contactUs">Contact Us <span className="arrow">&darr;</span></a>
           </ul>
         </div>
         
         {/* Buttons for large screens */}
         <div className="d-flex justify-content-end align-items-center navbar-buttons">
-          <button className="btn btn-success"><BsSearch /></button>
-          <button className="btn btn-primary">Login</button>
-          <BiUser className="user-profile-icon" />
+          {/* <button className="btn btn-success"><BsSearch /></button> */}
+          <button className="btn btn-primary login-btn">Login</button> {/* Added class login-btn */}
+          {/* <BiUser className="user-profile-icon" /> */}
         </div>
         {/* Toggler button for small screens */}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

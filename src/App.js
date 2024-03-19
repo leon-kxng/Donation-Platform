@@ -1,36 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/NavBar';
 import Footer from './Components/Footer';
-import Login from './Components/Login';
-import Signup from './Components/Signup'; 
-import './App.css';
+import HomePage from './Components/HomePage';
 import About from './Components/About';
-import Charity from './Components/Charity';
+import CharityPage from './Components/CharityPage'
+import DonationPages from './Components/DonationPages'
+import BlogPage from './Components/BlogPage';
+
 
 function App() {
-  const [showLogin, setShowLogin] = useState(true);
-
-  const toggleForm = () => {
-    setShowLogin(!showLogin);
-  };
   return (
-    <div>
-      <Navbar />
-      <div className="app-container">
-        {showLogin ? <Login /> : <Signup />}
-        <p>
-          {showLogin
-            ? "Don't have an account? "
-            : 'Already have an account? '}
-          <span onClick={toggleForm}>
-            {showLogin ? 'Register here' : 'Login here'}
-          </span>
-        </p>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/charityPage" element={<CharityPage />} />
+          <Route path='/Donation' element={<DonationPages />} />
+          <Route path='/blog' element={<BlogPage />} />
+
+         
+        </Routes>
+        <Footer />
       </div>
-      <About/>
-      <Charity/>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 
