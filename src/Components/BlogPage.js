@@ -1,5 +1,5 @@
 import React from 'react';
-import './BlogPage.css'; // Assuming you'll create Blog.css for styling
+import './BlogPage.css'; 
 
 function BlogPage() {
   // Dummy data for blog posts
@@ -95,6 +95,7 @@ function BlogPage() {
         <div className="admin-message">
           <span>By Admin</span>
         </div>
+        
         <div className="messaging-symbol">💬</div>
         <div className="donation-message">
           <span>Donation</span>

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^4.6.2",
     "jest": "^27.5.1",
+    "jquery": "^3.7.1",
     "nvm": "^0.0.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
