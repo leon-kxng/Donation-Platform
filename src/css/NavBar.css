@@ -6,8 +6,8 @@
     margin: 0 auto;    
     
   }
-  
-  .container {
+   
+  .navbar. container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,16 +16,16 @@
     margin: 0 auto; /* Center the container */
   }
   
-  .navbar-brand {
+  .navbar .navbar-brand {
     color: #333;
     font-weight: bold;
   }
   
-  .navbar-nav {
+  .navbar .navbar-nav {
     display: flex;
   }
   
-  .nav-link {
+  .navbar .nav-link {
     color: #333;
     font-weight: 500;
     text-decoration: none;
@@ -35,27 +35,27 @@
     font-size: 20px;
   }
   
-  .nav-link:hover {
+  .navbar .nav-link:hover {
     color: #00715D;
     text-decoration: underline 3px;
 
   }
   
-  .user-profile-icon {
+  .navbar .user-profile-icon {
     font-size: 1.8rem;
     margin-left: 10px;
   }
 
-  .user-profile-icon:hover {
+  .navbar .user-profile-icon:hover {
     cursor: pointer;
     
   }
   
-  .btn {
+  .navbar .btn {
     margin-right: 17px;          
   }
   
-  .btn-success {
+  .navbar .btn-success {
     /* position: absolute; */
     width: 50px;
     height: 50px;  
@@ -66,12 +66,12 @@
 
   }
 
-  .btn-success:hover {
+  .navbar .btn-success:hover {
     background-color: orange; 
     cursor:pointer;
   }
 
-  .btn-primary {
+  .navbar .btn-primary {
     /* position: absolute; */
     width: 99.19px;
     height: 50px;   
@@ -81,12 +81,12 @@
     color: white;
   }
 
-  .btn-primary:hover {
+  .navbar .btn-primary:hover {
     background-color: green;
     cursor:pointer;
   }
 
-  .navbar-brand img {
+  .navbar .navbar-brand img {
     position: relative;
     width: 120px;
     mix-blend-mode: normal;
@@ -97,7 +97,7 @@
 
 
 
-  .arrow {
+  .navbar .arrow {
     position: absolute;
     right: -10px;
     top: 50%;
@@ -108,12 +108,12 @@
     margin-left: 1.2rem */
   }
   
-  .nav-link:hover .arrow {
+  .navbar .nav-link:hover .arrow {
     opacity: 1;
   }
 
 
-  .navbar-toggler {
+  .navbar .navbar-toggler {
     font-size: 25px;
     border-radius: 10px;
     padding: 5px;
@@ -122,27 +122,27 @@
 
   }
 
-  .navbar-toggler:hover {
+  .navbar .navbar-toggler:hover {
     cursor: pointer;
   }
   
   @media (min-width: 1100px) {
-    .container {
+    .navbar .container {
       padding-right: 20px;
       padding-left: 20px;
     }
   
-    .navbar-nav {
+    .navbar .navbar-nav {
       margin-right: 0;
     }
 
-    .navbar-toggler {
+    .navbar .navbar-toggler {
         display: none;
       }
   }
 
   @media (max-width: 1100px) {
-    .navbar-buttons {
+    .navbar .navbar-buttons {
       display: none;
     }
   }

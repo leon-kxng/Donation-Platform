@@ -319,3 +319,46 @@ h3 {
 .blog-card-readmore:hover {
   color: #0056b3;
 }
+
+
+.mini-header {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: linear-gradient(90deg, #151C36 27.6%, rgba(171, 185, 183, 0.13) 72.4%), url('https://c7.alamy.com/comp/C041G1/thoughtful-young-poor-lower-caste-indian-street-girls-sisters-black-C041G1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 200px;
+  border-radius: 5px;
+  /* transform: scaleX(-1); */
+}
+
+/* Main → Section → Section paints */
+/* 
+position: absolute;
+left: 0px;
+right: 0px;
+top: 110px;
+bottom: 4230.11px;
+
+background: linear-gradient(90deg, #151C36 27.6%, rgba(171, 185, 183, 0.13) 72.4%); */
+
+
+.mini-header button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top:  50px;
+}
+
+.mini-header p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}

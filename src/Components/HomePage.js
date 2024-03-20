@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'; 
+import Typed from 'typed.js';
+import { Carousel, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import _ from 'lodash';
 
-import './HomePage.css'
+import '../css/HomePage.css'
 
 import CharityCard from "./CharityCard"
 
-function HomePage( ) {
+function HomePage() {
   const [index, setIndex] = useState(0);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const typedRef = useRef(null);
+  const [charities, setCharities] = useState([]);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -22,21 +28,72 @@ function HomePage( ) {
     // Handle resume on leave logic here
   };
 
+  const texts = [
+    'Donate to Children And senior Citizens',
+    'Support Education And Healthcare',
+    'Make a Difference Today for Better',
+  ];
+
+  useEffect(() => {
+    const options = {
+      strings: texts,
+      typeSpeed: 70,
+      backSpeed: 70,
+      backDelay: 10000,
+      startDelay: 500,
+      loop: true,
+      loopCount: Infinity,
+      showCursor: false,
+    };
+
+    typedRef.current = new Typed('.header-2', options);
+
+    return () => {
+      typedRef.current.destroy();
+    };
+  }, []);
+
+    // Fetch charities useEffect
+
+    useEffect(() => {
+      const fetchCharities = async () => {
+        try {
+          const response = await fetch("/charities");
+          if (!response.ok) {
+            throw new Error("Failed to fetch charities");
+          }
+          const charityData = await response.json();
+          setCharities(charityData);
+        } catch (error) {
+          console.error(error);
+        }
+      };
   
-  return(
+      fetchCharities();
+  
+      return () => {
+        // Cleanup if necessary
+      };
+    }, []);
+
+    if (!charities) {
+      return <div>Loading...</div>;
+    }
+
+  
+  return (
     <div className="homepage-main">
-      <div className="homepage-landing">        
+      <div className="homepage-landing">
         <div className="content-container">
           <p className="header-1">Speak Hope for the Homeless</p>
-          <h1 className="header-2">Donate to children & senior Citizens</h1>
-          <p className="header-3">In many regions across the globe, young school-going girls face challenges accessing essential items like pads for their menstrual hygiene. Studies conducted in 2016 by the Ministry of Education revealed that girls from impoverished families miss 20% of school days annually due to a lack of sanitary towels. The data indicates that a girl in primary school, between class 6 and 8, can lose up to 18 weeks out of 108 weeks, while those in high school can lose almost 24 weeks out of 144 weeks of learning. Our dedicated organization not only provides sanitary towels but also focuses on delivering clean water and sanitation facilities, including toilets, to ensure adherence to proper menstrual hygiene guidelines set by UNICEF.</p>          
+          <h1 className="header-2"></h1>
+          <p className="header-3">In many regions across the globe, young school-going girls face challenges accessing essential items like pads for their menstrual hygiene. Studies conducted in 2016 by the Ministry of Education revealed that girls from impoverished families miss 20% of school days annually due to a lack of sanitary towels. The data indicates that a girl in primary school, between class 6 and 8, can lose up to 18 weeks out of 108 weeks, while those in high school can lose almost 24 weeks out of 144 weeks of learning. Our dedicated organization not only provides sanitary towels but also focuses on delivering clean water and sanitation facilities, including toilets, to ensure adherence to proper menstrual hygiene guidelines set by UNICEF.</p>
           <div className="content-btns">
             <button className="become-donor-btn">Become a Lifesaver</button>
-            <button className="signup-btn">SignUp A Charity</button>
+            <Link to="/charityform"><button className="signup-btn">SignUp A Charity</button></Link>
           </div>
-        </div>     
+        </div>
       </div>
-
 
       <div className="other-contents">
       <div className="row">
@@ -103,30 +160,21 @@ function HomePage( ) {
         activeIndex={index}
         onSelect={handleSelect}
         className="donations-carousel"
-        indicators={false} // Hide the default indicators
+        indicators={true}
       >
-        <Carousel.Item>
-          <div className="card-container">
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="card-container">
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-            <CharityCard />
-          </div>
-        </Carousel.Item>
-        {/* Add more Carousel.Items if needed for additional sets of cards */}
+        {_.chunk(charities, 6).map((chunk, chunkIndex) => (
+          <Carousel.Item key={chunkIndex}>
+            <div className="row">
+              {chunk.map((charity) => (
+                <div key={charity.charity_id} className="col-md-4">
+                    {/* <Link to={`/charity/${charity.id}`}> */}
+                      <CharityCard charity={charity} />
+                    {/* </Link> */}
+                </div>
+              ))}
+            </div>
+          </Carousel.Item>
+        ))}
       </Carousel>
     </div>
 

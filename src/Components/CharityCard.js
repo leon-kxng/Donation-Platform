@@ -1,62 +1,63 @@
 import React, { useState, useEffect } from 'react';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import { ProgressBar, Button, Spinner } from 'react-bootstrap';
 import { RiShareForwardFill } from "react-icons/ri";
-import './CharityCard.css'; // Updated CSS file name
+import '../css/CharityCard.css'; // Updated CSS file name
 
-const CharityCard = () => {
-  // Sample data for demonstration
-  const goalAmount = 40000;
-  const raisedAmount = 23404;
+const CharityCard = ({ charity }) => {
+  const [loading, setLoading] = useState(true);
 
-  // Calculate the percentage of the goal achieved
-  const progressPercentage = (raisedAmount / goalAmount) * 100;
-
-  // State for controlling the progress bar
-  const [progress, setProgress] = useState(0);
-
-  // Animate the progress bar
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress < progressPercentage ? prevProgress + 1 : prevProgress));
-    }, 30);
+    setLoading(true);
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [progressPercentage]);
+    return () => clearTimeout(timer);
+  }, [charity]);
 
   return (
-    <div className="unique-charity-card"> {/* Updated class name */}
-      <img src="https://qph.cf2.quoracdn.net/main-qimg-9999e7cbd7d84e36c1021800fb6819f8-lq" className="card-img-top" alt="Card"/>
-      <div className="card-body">
-        <p className="card-text h5">Lorem Ipsum</p>
-        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <ProgressBar 
-          now={progress} 
-          label={`${progress}%`} 
-          variant="success" 
-          className="mb-3 custom-progress-bar"
-          style={{
-            backgroundColor: '#C9EFE8',
-            height: '11px',
-            overflow: 'hidden',
-          }}
-          />
-        <div className="d-flex justify-content-between">
-          <p className="card-text">
-            <strong>Goal:</strong> ${goalAmount}
-          </p>
-          <p className="card-text">
-            <strong>Raised:</strong> ${raisedAmount}
-          </p>
-          <RiShareForwardFill className="share"/>
+    <>
+      {loading ? (
+        <div className="d-flex justify-content-center mt-5">
+          <Spinner animation="border" variant="primary" />
         </div>
-        <Button variant="primary" className="mt-3">
-          Donate Now
-        </Button>
-      </div>
-    </div>
+      ) : (
+        <div className="unique-charity-card">
+          <img src={charity.image_url} className="card-img-top" alt="Card"/>
+          <div className="card-body">
+            <p className="card-text h5">{charity.name}</p>
+            <p className="card-text">{charity.mission}</p>
+            <ProgressBar
+              now={(charity.raised / charity.goal) * 100}
+              label={`${Math.ceil(((charity.raised / charity.goal) * 100)).toFixed(2)}%`}
+              variant="success"
+              className="mb-3 custom-progress-bar"
+              style={{
+                backgroundColor: '#C9EFE8',
+                height: '11px',
+                overflow: 'hidden',
+              }}
+            />
+            <div className="d-flex justify-content-between">
+              <p className="card-text">
+                <strong>Goal:</strong> ${Math.ceil(charity.goal)}
+              </p>
+              <p className="card-text">
+                <strong>Raised:</strong> ${Math.ceil(charity.raised)}
+              </p>
+              <RiShareForwardFill className="share"/>
+            </div>
+            <Link to={`/charityPage/${charity.charity_id}`}>
+            <Button variant="primary" className="mt-3">
+              Donate Now
+            </Button>
+          </Link>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

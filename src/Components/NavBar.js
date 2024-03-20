@@ -3,7 +3,8 @@ import React from 'react';
 import { BiUser } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
 import { IoMenu } from "react-icons/io5";
-import './NavBar.css';
+import {Link } from "react-router-dom" 
+import '../css/NavBar.css';
 
 function Navbar() {
   return (
@@ -20,14 +21,15 @@ function Navbar() {
             <a className="nav-link" href="#">Donation <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Blog <span className="arrow">&darr;</span></a>
             <a className="nav-link" href="#">Pages <span className="arrow">&darr;</span></a>
-            <a className="nav-link" href="/contactUs">Contact Us <span className="arrow">&darr;</span></a>
+            <a className="nav-link" href="/ContactPage">Contact Us <span className="arrow">&darr;</span></a>
           </ul>
         </div>
         
         {/* Buttons for large screens */}
         <div className="d-flex justify-content-end align-items-center navbar-buttons">
           <button className="btn btn-success"><BsSearch /></button>
-          <button className="btn btn-primary">Login</button>
+          <Link to='/login'><button className="btn btn-primary">Login</button></Link>
+          <Link to='./signup'><button className="btn btn-primary">SignUp</button></Link>
           <BiUser className="user-profile-icon" />
         </div>
         {/* Toggler button for small screens */}

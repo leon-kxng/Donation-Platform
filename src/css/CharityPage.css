@@ -217,8 +217,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 500px;
-  /* margin: 0 auto; */
-  margin-left: 540px;
+  margin: 0 auto;
+  
   font-family: Arial, sans-serif;
   color: #333;
   border-top: 6px solid;

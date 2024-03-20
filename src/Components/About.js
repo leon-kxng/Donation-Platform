@@ -5,7 +5,7 @@ import { Ri24HoursFill } from "react-icons/ri";
 import { LuCircleDollarSign } from "react-icons/lu";
 import { FaUser } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa";
-import "./About.css";
+import "../css/About.css";
 
 function About() {
   const companyLogos = [
@@ -64,9 +64,9 @@ function About() {
   return (
     <div className="about-page">
       <div className="mini-header">
-        <img />
-        <button>Home</button>
-        <p>About Us</p>
+        {/* <img src="https://c7.alamy.com/comp/C041G1/thoughtful-young-poor-lower-caste-indian-street-girls-sisters-black-C041G1.jpg" alt="background-images"/> */}
+        <button>Home</button><button>About Us</button>   
+        <p>About Us</p>     
       </div>
 
       <div className="about-cards-container">
