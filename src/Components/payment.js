@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PaymentProcessing from "./PaymentProcessing";
-import "./payment.css";
+import "../css/payment.css";
 
 const Payment = ({ toggleModal }) => {
   const [phoneNumber, setPhoneNumber] = useState("");

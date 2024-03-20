@@ -2,7 +2,7 @@ import React from 'react';
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { FaMapMarkerAlt, FaFacebookSquare, FaYoutube, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
-import './Footer.css';
+import '../css/Footer.css';
 
 function Footer() {
   return (

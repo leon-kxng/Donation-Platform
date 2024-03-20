@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Payment from './payment';
-import './CharityPage.css';
+import '../css/CharityPage.css';
 
 const CharityPage = () => {
   const charityImage = "https://i.pinimg.com/236x/96/f0/b0/96f0b05606ff3ea96e5c2e70ae0bb91d.jpg";
