@@ -58,20 +58,20 @@
 
 .content-btns button {
   margin-left: 40px;
-  box-shadow: 0 1px 1px white;
+  /* box-shadow: 0 1px 1px white; */
   border: 0;
   padding: 10px;
 }
 
 .content-btns button:hover {
-  box-shadow: 0 2px 2px white;
+  /* box-shadow: 0 2px 2px white; */
   cursor: pointer;
   
 }
 
 .become-donor-btn {
   background: #FFB840;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: 700;
   font-size: 16px;
   
@@ -81,7 +81,7 @@
   width: 184px;
   background: #267969;
   font-size: 16px;
-  border-radius: 50px;
+  border-radius: 10px;
   color: white;
   
 }
@@ -91,16 +91,21 @@
   border-radius: 20px;
 }
 
+.carousel-item img {
+  border-radius: 10px;
+}
+
 .other-contents {
-  margin-top: 100px;
+  margin-top: 0px;
   /* box-shadow: 0 2px 2px 2px; */
   padding: 10px;
+  margin-bottom: 70px;
 }
 
 .signup-btn-2 {
   background-color: black;
   color: white;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .carousel {
@@ -122,7 +127,7 @@
   margin: 0 auto;
   padding: 20px; /* Add padding for spacing */
   border: 2px orange solid;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .donations {
@@ -131,19 +136,27 @@
 }
 
 .donation-message {
-  font-size: 1.5rem;
+  font-weight: bold;
+  /* font-size: 18px; */
   text-align: center;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.5;
+  margin-top: 100px;
 }
+
+/* In your HomePage.css file */
+.donation-container .donation-message {
+  font-size: 28px; /* Adjust the font size as needed */
+  margin-bottom: 40px;
+}
+
+
 .donations-carousel {
   margin-top: 20px;
 }
 
 
-
-/* YourStyles.css */
 
 .homepage-testimonials {
   text-align: center;
