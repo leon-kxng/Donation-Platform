@@ -1,53 +1,66 @@
-import React, { useState } from 'react';
-import { FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import Payment from './payment';
+import { FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { useParams } from 'react-router-dom'; // Assuming you're using React Router
 import '../css/CharityPage.css';
+import Payment from './Payment'
 
 const CharityPage = () => {
-  const charityImage = "https://i.pinimg.com/236x/96/f0/b0/96f0b05606ff3ea96e5c2e70ae0bb91d.jpg";
-  const organizerImage = "https://i.pinimg.com/236x/96/f0/b0/96f0b05606ff3ea96e5c2e70ae0bb91d.jpg";
-  const organizerName = "Morgan";
-  const creationDate = "January 1, 2024";
-  const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum tellus vitae lacinia faucibus. Sed hendrerit gravida risus, quis tempus mauris rutrum non. Mauris vestibulum lectus in tincidunt condimentum. Integer tincidunt risus vel lacus pulvinar hendrerit. Nulla id consectetur dolor. Maecenas vestibulum pretium libero, vitae tempor tortor suscipit a. Maecenas vel viverra dolor. Quisque at ipsum nunc. Sed scelerisque nec leo eget mattis. In hendrerit turpis id leo consequat, a vehicula urna dignissim. Donec pretium libero turpis, eget vehicula augue viverra nec. Vestibulum tristique pharetra libero eu rhoncus. Nunc porttitor consectetur urna at interdum. Aliquam sed dolor sodales lorem elementum rhoncus at maximus urna.";
-  const raisedAmount = 12024;
-  const goalAmount = 100039;
-  const progress = (raisedAmount / goalAmount) * 100;
+  const { charityId } = useParams(); // Get the charityId from the URL
+  // console.log(charityId)
+  const [charityData, setCharityData] = useState(null);
 
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
 
-  const contactDetails = [
-    {
-      charity_email: "edwardswendy@example.org",
-      map_details: "https://www.example.com/find-us",
-      date: "2024-03-11 07:42:57",
-    }
-  ];
+  useEffect(() => {
+    const fetchCharityData = async () => {
+      try {
+        const response = await fetch(`/charities/${charityId}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        setCharityData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchCharityData();
+  }, [charityId]);
+
+  if (!charityData) {
+    return <div>Loading...</div>;
+  }
+
+  const progress = (charityData.raised / charityData.goal) * 100;
 
   return (
     <div className="charity-page-container">
       <div className="main-content">
         <div className="charity-card">
-          <h2 className="page-title">Charity Details</h2>
+          <h2 className="page-title">Donate to {charityData.name}</h2>
           <div className="charity-image-container">
-            <img src={charityImage} alt="Charity" className="charity-image" />
+            <img src={charityData.image_url} alt="Charity Image" className="charity-image" />
           </div>
           <div className="charity-info">
-            <img src={organizerImage} alt="Organizer" className="organizer-image" />
+            <img src={charityData.image_url} alt="Organizer Image" className="organizer-image" />
             <div>
-              <p className="organizer-name">{organizerName}, the organizer of the charity</p>
-              <p className="creation-date">Created at: {creationDate}</p>
+              <p className="organizer-name">{charityData.organizerName}, the organizer of the charity</p>
+              <p className="creation-date">Created at: {charityData.creationDate}</p>
             </div>
           </div>
           <div className="charity-description">
-            <p>{description}</p>
+            <p>{charityData.description}</p>
           </div>
         </div>
+
+
         <div className="donation-card">
-          <h3 className="donation-heading">Support Our Cause:</h3>
-          <p className="donation-status">${raisedAmount} raised of ${goalAmount} goal</p>
+          <h3 className="donation-heading">Support {charityData.name}'s Cause::</h3>
+          <p className="donation-status">${charityData.raised} raised of ${charityData.goal} goal</p>
           <ProgressBar now={progress} label={'${progress.toFixed(2)}%'} variant="success" className="custom-progress-bar" />
           <button onClick={toggleModal} className="donate-btn">Donate Now</button>
           {showModal && <Payment toggleModal={toggleModal} />}
@@ -71,10 +84,11 @@ const CharityPage = () => {
       <div className="contact-card">
         <h2>Contact Us</h2>
         <div className="contact-info">
-          <p><FaEnvelope className="icon" /> <a href={'mailto:${contactDetails[0].charity_email}'}>{contactDetails[0].charity_email}</a></p>
-          <p><FaMapMarkerAlt className="icon" /> <a href={contactDetails[0].map_details} target="_blank" rel="noopener noreferrer">Find Us on the Map</a></p>
-          <p><FaClock className="icon" /> Last Contact: {contactDetails[0].date}</p>
+          <p><FaEnvelope className="icon" /> <a href={`mailto:${charityData.contact_details.charity_email}`}>{charityData.email}</a></p>
+          <p><FaMapMarkerAlt className="icon" /> <a href={charityData.contact_details.map_details}>Find {charityData.name} on the Map</a></p>
+          <p><FaClock className="icon" /> <strong>Last Contact:</strong> {charityData.phone_number}</p>
         </div>
+        
         <div className="user-message">
           <h3>Write Your Message</h3>
           <textarea placeholder="Type your message here..." ></textarea>

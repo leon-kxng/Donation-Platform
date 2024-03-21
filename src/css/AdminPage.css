@@ -1,0 +1,92 @@
+/* AdminPage.css */
+
+
+
+.admin-page-container .sidebar {
+  background-color: #00715d;
+  padding: 20px;
+  color: white;
+}
+
+.admin-page-container .sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.admin-page-container .main-content {
+  padding: 20px;
+}
+
+.admin-page-container .section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-page-container .section h2 {
+  color: #00715d;
+  margin-bottom: 20px;
+}
+
+.admin-page-container .section p {
+  color: #333;
+}
+
+/* Form styles */
+.admin-page-container .form-group {
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.admin-page-container .btn-primary {
+  background-color: #00715d;
+  border-color: #00715d;
+}
+
+.admin-page-container .btn-primary:hover {
+  background-color: #005b49;
+  border-color: #005b49;
+}
+
+/* Chart styles */
+.admin-page-container canvas {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-top-display {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-display {
+  margin: 0 auto;
+}
+
+ .admin-page-container .carousel-item-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.admin-charity-card {
+  /* margin: 0 auto; */
+  max-width: 500px;
+} 
+
+/* Update the style for the carousel indicators */
+/* CSS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-indicators li {
+    background-color: red; /* Set the color to red */
+}
+
+.admin-carousel {
+  max-width: 500px;
+}

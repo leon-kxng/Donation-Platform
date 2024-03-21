@@ -1,0 +1,43 @@
+.charity-form-container {
+  height:80vh;
+  margin: 0 auto;
+  
+}
+
+
+.custom-card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);  
+  width: 800px;
+  margin: 0 auto;
+  height: 500px;
+}
+
+
+.custom-card .card-body {
+  padding: 50px;
+  
+}
+
+.custom-card .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.custom-card .form-group {
+  margin-bottom: 20px;
+}
+
+.custom-card .btn {
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.upload-box {
+  /* height: 300px; */
+}
+
+.uploaded-image {
+  width: 100px
+}

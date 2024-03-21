@@ -1,0 +1,144 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.login-container .card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 500px;
+  /* height: 600px; */
+}
+
+.login-container .card .logo {
+  width: 100px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.login-container .card .input-group {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 10px;
+}
+
+.login-container .card input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.login-container .card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container .card .login-button {
+  background-color: #00715D;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.login-container .card .login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-container .card .signup-text {
+  margin-top: 10px;
+}
+
+.login-container .card .signup-text a {
+  color: #00715D;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.login-container .card .signup-text a:hover{
+  color: red
+}
+
+.login-container .card .google-login-button {
+  background-color: #FFB840;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container .card .google-login-button:hover {
+  background-color: #c1351d;
+}
+
+
+.goolge-icon {
+  font-size: 1.6rem;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Add these styles to your CSS file */
+.checkbox-group {
+  margin-top: 20px;
+}
+
+.sign-up-checkbox input[type="checkbox"]:checked + .form-check-label::before {
+  background-color: yellow !important; /* Yellow color for checked state */
+}
+
+.sign-up-checkbox input[type="checkbox"]:not(:checked) + .form-check-label::before {
+  background-color: green !important; /* Green color for unchecked state */
+}
+
+.sign-up-checkbox input[type="checkbox"]:checked + .form-check-label::after {
+  color: green !important; /* Green checkmark color for checked state */
+}
+
+.sign-up-checkbox input[type="checkbox"]:not(:checked) + .form-check-label::after {
+  color: yellow !important; /* Yellow checkmark color for unchecked state */
+}
+
+.kenyan-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-left: 20px;
+}
+
+.kenyan-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.kenyan-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
