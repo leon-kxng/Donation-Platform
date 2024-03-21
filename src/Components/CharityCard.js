@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
 import { RiShareForwardFill } from "react-icons/ri";
-import './CharityCard.css'; // Updated CSS file name
+import '../css/CharityCard.css'; // Updated CSS file name
 
 const CharityCard = () => {
   // Sample data for demonstration

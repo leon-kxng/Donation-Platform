@@ -5,7 +5,7 @@ import { Ri24HoursFill } from "react-icons/ri";
 import { LuCircleDollarSign } from "react-icons/lu";
 import { FaUser } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa";
-import "./About.css";
+import "../css/About.css";
 
 function About() {
   const companyLogos = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import './BlogPage.css'; // Assuming you'll create Blog.css for styling
+import '../css/BlogPage.css'; // Assuming you'll create Blog.css for styling
 
 function BlogPage() {
   // Dummy data for blog posts

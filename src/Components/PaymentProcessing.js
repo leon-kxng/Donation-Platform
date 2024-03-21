@@ -1,5 +1,5 @@
 import React from "react";
-import "./PaymentProcessing.css"; // Corrected file name
+import "../css/PaymentProcessing.css"; // Corrected file name
 
 const PaymentProcessing = ({ toggleModal, success, error }) => {
   return (
