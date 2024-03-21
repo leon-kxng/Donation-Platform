@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container">
-        <a className="navbar-brand" href="#"><img src="/logo.png" alt="Onation.png"/></a>
+        <a className="navbar-brand" href="/"><img src="/logo.png" alt="Onation.png"/></a>
         
         
         {/* Navbar links */}

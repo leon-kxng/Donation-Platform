@@ -8,13 +8,13 @@ function Footer() {
   return (
     <div>
     <div className="image-list-container">
-        <img src="image1.jpg" alt="Image 1" className="image" />
-        <img src="image2.jpg" alt="Image 2" className="image" />
-        <img src="image3.jpg" alt="Image 3" className="image" />
-        <img src="image3.jpg" alt="Image 3" className="image" />
-        <img src="image3.jpg" alt="Image 3" className="image" />
-        <img src="image3.jpg" alt="Image 3" className="image" />
-        <img src="image3.jpg" alt="Image 3" className="image" />
+    <img src="https://i.pinimg.com/564x/65/d3/22/65d322377a7abedf08b15d54b42def66.jpg" alt="ge 1" className="image" />
+    <img src="https://i.pinimg.com/564x/9e/59/56/9e59561b2b922a619b69ad8d5ffe045b.jpg" alt="ge 3" className="image" />
+    <img src="https://i.pinimg.com/564x/cb/ce/00/cbce0046349364f322dcbc6fabb948f0.jpg" alt="ge 3" className="image" />
+    <img src="https://i.pinimg.com/564x/19/3e/72/193e72396dfb018d334001fc2d280cb7.jpg" alt="ge 2" className="image" />
+    <img src="https://i.pinimg.com/564x/24/6d/cd/246dcdb8de1ca79a461af792961cb7cc.jpg" alt="ge 3" className="image" />
+    <img src="https://i.pinimg.com/236x/11/17/ce/1117cef05038260db4d3328f62fd1b8b.jpg" alt="ge 3" className="image" />
+    <img src="https://i.pinimg.com/564x/e6/73/5f/e6735f272d196a0d1a0c5cf02d90d2b6.jpg" alt="ge 3" className="image" />
         {/* Add more images as needed */}
     </div>
     <div className="footer">
@@ -26,12 +26,12 @@ function Footer() {
 
                 <div className="footer-navlinks">
                     <ul>
-                        <a className="foot-link" href="#">Home</a>
-                        <a className="foot-link" href="#">About</a>
-                        <a className="foot-link" href="#">Donation</a>
-                        <a className="foot-link" href="#">Blog</a>
-                        <a className="foot-link" href="#">Pages</a>
-                        <a className="foot-link" href="#">Contact</a>
+                        <a className="foot-link" href="/">Home</a>
+                        <a className="foot-link" href="/about">About</a>
+                        <a className="foot-link" href="/Donation">Donation</a>
+                        <a className="foot-link" href="/blog">Blog</a>
+                        {/* <a className="foot-link" href="#">Pages</a> */}
+                        <a className="foot-link" href="/ContactUs">Contact</a>
                     </ul>
                 </div>
 
