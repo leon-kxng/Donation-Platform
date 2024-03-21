@@ -81,7 +81,7 @@
     display: inline-block;
     margin-top: 20px; /* Spacing between message and read more link */
     padding: 8px 16px; /* Oval button padding */
-    border-radius: 20px; /* Oval button border-radius */
+    border-radius: 10px; /* Oval button border-radius */
     background-color: #267969; /* Button background color */
     color: #fff; /* Button text color */
     text-decoration: none; /* Remove underline */
