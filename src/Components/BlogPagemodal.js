@@ -1,41 +1,46 @@
-import React, { useState } from 'react';
-import Card from './Card'; 
-import '../css/BlogPagemodal.css'
+import React, { useEffect } from 'react';
+import '../css/BlogPagemodal.css'; // Import CSS for modal styling
 
-function Modal({ imageUrl, title, description }) {
+function BlogPageModal({ post, onClose }) {
+  // Close the modal when clicking outside of it
+  const handleCloseOutside = (event) => {
+    if (event.target === event.currentTarget) {
+      onClose(); // Call onClose function passed as prop
+    }
+  };
+
+  // Add event listener when component mounts
+  useEffect(() => {
+    document.addEventListener('mousedown', handleCloseOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleCloseOutside);
+    };
+  }, []); // Empty dependency array ensures effect runs only once on mount
+
   return (
-    <div className="modal">
+    <div className="modal" onClick={handleCloseOutside}>
       <div className="modal-content">
-        <span className="close">&times;</span>
-        <Card imageUrl={imageUrl} title={title} description={description} />
+        {/* <span className="close" onClick={onClose}>&times;</span> */}
+        <img src={post.image} alt="Blog Post" className="modal-blog-image" />
+        <div className="modal-date">{post.date}</div>
+        <div className="modal-admin-message-container">
+          <div className="admin-symbol human-symbol">👤</div>
+          <div className="modal-message">
+            <span>By Admin</span>
+          </div>
+          <div className="messaging-symbol">💬</div>
+          <div className="donation-message">
+            <span>{post.message}</span>
+          </div>
+        </div>
+        <div className="modal-message">
+          <p className="bold">{post.assuranceMessage}</p>
+          <p>{post.additionalMessage}</p>
+        </div>
       </div>
     </div>
   );
 }
 
-function App() {
-  const [modalVisible, setModalVisible] = useState(false);
+export default BlogPageModal;
 
-  const openModal = () => {
-    setModalVisible(true);
-  };
-
-  const closeModal = () => {
-    setModalVisible(false);
-  };
-
-  return (
-    <div>
-      <button onClick={openModal}>Open Modal</button>
-      {modalVisible && (
-        <Modal
-          imageUrl="https://i.pinimg.com/originals/7c/61/ba/7c61ba87a74d4f3c0d2ad0a2eb3dc6ca.jpg" 
-          title="Title"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in libero semper, varius ante nec, aliquam libero. Integer nec tellus nec lectus aliquam congue. Sed consectetur libero id justo commodo, quis tempor ligula varius. Nulla facilisi. Sed consectetur ante at lorem consectetur, quis consequat tortor lobortis. Vivamus ac lorem non metus mattis lacinia. Proin ut tortor ut ex fringilla commodo. Nam a nunc in lacus congue aliquet. Vivamus ut lacus quis purus suscipit dictum. Donec nec tortor vitae magna commodo vehicula. In at augue a mi fermentum fringilla ac id odio. Duis sed libero ac metus dignissim scelerisque. Donec tincidunt neque in nunc finibus, sit amet egestas elit varius. Morbi et enim justo. Nam aliquet velit nec mauris bibendum, a hendrerit ante pulvinar."
-        />
-      )}
-    </div>
-  );
-}
-
-export default BlogPagemodal;
