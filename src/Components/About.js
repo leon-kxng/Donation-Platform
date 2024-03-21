@@ -11,28 +11,28 @@ import "./About.css";
 
 function About() {
   const companyLogos = [
-    'https://example.com/logo1.png',
-    'https://example.com/logo2.png',
-    'https://example.com/logo3.png',
-    'https://example.com/logo1.png',
-    'https://example.com/logo2.png',
-    'https://example.com/logo3.png',
-    'https://example.com/logo1.png',
-    'https://example.com/logo2.png',
-    'https://example.com/logo3.png',
+    'https://i.pinimg.com/236x/77/d6/70/77d670dc0d4c230d8f400845a8e59857.jpg',
+    'https://i.pinimg.com/236x/86/a7/10/86a710d6e9e987e773e9251c69c507c0.jpg',
+    'https://i.pinimg.com/236x/f9/bb/f0/f9bbf0df344f9ea59985fc1e56416ec8.jpg',
+    'https://i.pinimg.com/236x/64/2d/8f/642d8f291e9f6e92a8aa668976d258e0.jpg',
+    'https://i.pinimg.com/236x/1b/f3/40/1bf340e6810729a509b3bc95caebc27e.jpg',
+    'https://i.pinimg.com/236x/ed/d3/59/edd3591496feef6997e61c297b0c6c31.jpg',
+    'https://i.pinimg.com/236x/cb/d4/b2/cbd4b21e9dddd638ac4bce16d0353d2c.jpg',
+    'https://i.pinimg.com/236x/02/08/24/0208240c3e32e21150ee1d0cccf91c2e.jpg',
+    'https://i.pinimg.com/236x/b5/56/6c/b5566c63891b527f52aa79a3ab8d2725.jpg',
     // Add more logo URLs here as needed
   ];
 
   const volunteeringTeamMembers = [
     {
-      name: 'John Doe',
+      name: 'Dwayne Johnson',
       role: 'Team Leader',
-      photo: 'https://example.com/john_doe_photo.png',
+      photo: 'https://i.pinimg.com/236x/1b/d6/71/1bd671eeb2ab172e8b8fa0f80ad9722b.jpg',
     },
     {
-      name: 'Jane Smith',
+      name: 'Oprah  Winfrey',
       role: 'Volunteer Coordinator',
-      photo: 'https://example.com/jane_smith_photo.png',
+      photo: 'https://i.pinimg.com/236x/31/96/79/31967979ca31e836deffb8482da9fc05.jpg',
     },
     // Add more team members here as needed
   ];
@@ -70,6 +70,12 @@ function About() {
         <button></button>
         <p></p>
       </div>
+
+      <div className="about-us-container">
+
+      <h1 className="about-us-title">About Us</h1>
+
+    </div>
 
       <div className="about-cards-container">
         <div className="about-card">
