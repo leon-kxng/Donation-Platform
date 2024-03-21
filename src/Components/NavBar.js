@@ -25,7 +25,7 @@ function Navbar() {
              {/* <a className="nav-link" href="/blog">Blog <span className="arrow">&darr;</span></a> */}
              <a className="nav-link" href="/blog">Blog <span className="arrow">&darr;</span></a>
 
-             <a className="nav-link" href="/contactUs">Contact Us <span className="arrow">&darr;</span></a>
+             <a className="nav-link" href="/contactUs">Contact Us<span className="arrow">&darr;</span></a>
           </ul>
         </div>
         
@@ -33,6 +33,7 @@ function Navbar() {
         <div className="d-flex justify-content-end align-items-center navbar-buttons">
           {/* <button className="btn btn-success"><BsSearch /></button> */}
           <button className="btn btn-primary login-btn">Login</button> {/* Added class login-btn */}
+          <button className="btn btn-primary SignUp-btn">Sign Up</button> {/* Added class login-btn */}
           {/* <BiUser className="user-profile-icon" /> */}
         </div>
         {/* Toggler button for small screens */}
