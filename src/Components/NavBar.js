@@ -24,12 +24,12 @@ function Navbar() {
     setAlertMessage(message);
     setShowAlert(true);
   };
+  
 
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container">
-        <a className="navbar-brand" href="#"><img src="/logo.png" alt="Onation.png"/></a>
-        
+        <a className="navbar-brand" href="#"><img src="/logo.png" alt="Onation.png"/></a>        
         
         {/* Navbar links */}
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -62,6 +62,7 @@ function Navbar() {
                 <Link to="/notifications" onClick={() => handleLinkClick('Please sign in or login to view notifications.')}><FaBell /> Notifications</Link>
                 <Link to="/booking/:id" onClick={() => handleLinkClick('Please sign in or login to view bookings.')}><FaBook /> Charities</Link>
                 <Link to="/Account" onClick={() => handleLinkClick('Please sign in or login to view account details.')}><FaUser /> Account</Link>
+                <Link to="/adminPage" onClick={() => handleLinkClick('')}><CiLogout className='log-out-icon' /> Logout</Link>
                 <Link to="/logout" onClick={() => handleLinkClick('')}><CiLogout className='log-out-icon' /> Logout</Link>
               </div>
             )}

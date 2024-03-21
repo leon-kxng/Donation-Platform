@@ -7,8 +7,7 @@ import '../css/CharitySignForm.css';
 
 const CharitySignUpForm = () => {
   const [step, setStep] = useState(1);
-  const [showModal, setShowModal] = useState(false);
- 
+  const [showModal, setShowModal] = useState(false); 
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [charityTitle, setCharityTitle] = useState('')
   const [fundraisingReason, setFundraisingReason] = useState('');
@@ -22,16 +21,16 @@ const CharitySignUpForm = () => {
   const [mapDetails, setMapDetails] = useState('');
 
   const countryOptions = countries().getData();
-
-  
+ 
   const nextStep = () => {
     setStep(step + 1);
   };
-
+  
   const prevStep = () => {
     setStep(step - 1);
   };
  
+  
   const handleCountryChange = (selectedOption) => {
     setSelectedCountry(selectedOption);
   };
@@ -87,8 +86,6 @@ const CharitySignUpForm = () => {
       console.error('Error signing up charity:', error);
     }
   }
-
-
 
   const renderForm = () => {
     switch (step) {

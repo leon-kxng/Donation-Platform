@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Pagination } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import '../css/DonationPages.css';
 
 import CharityCard from './CharityCard';
@@ -26,6 +25,7 @@ function DonationPages() {
       break;
     }
   }
+
 
   const renderPaginationItems = () => {
     const items = [];

@@ -9,7 +9,6 @@ const CharityPage = () => {
   const { charityId } = useParams(); // Get the charityId from the URL
   // console.log(charityId)
   const [charityData, setCharityData] = useState(null);
-
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
@@ -17,7 +16,9 @@ const CharityPage = () => {
   useEffect(() => {
     const fetchCharityData = async () => {
       try {
-        const response = await fetch(`/charities/${charityId}`);
+        const response = await fetch(`http://127.0.0.1:5000/charities/${charityId}`);
+
+
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
@@ -27,7 +28,7 @@ const CharityPage = () => {
         console.error(error);
       }
     };
-
+    
     fetchCharityData();
   }, [charityId]);
 

@@ -14,10 +14,10 @@ const SignUp = () => {
     phoneNumber: '',    
   });
 
+  const [roles, setRoles] = useState({ donor: true, charity: false });
+
   const [errors, setErrors] = useState({});
   const [isKenyan, setIsKenyan] = useState(false); // Separate state for isKenyan
-
-
   
   // Get the signup function from the authentication context
   const { signup } = useAuth();
@@ -30,6 +30,13 @@ const SignUp = () => {
       [name]: value,
     });
   }  
+
+  
+
+  const handleRoleChange = (role) => {
+    setRoles(prevRoles => ({ ...prevRoles, [role]: !prevRoles[role] }));
+  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,8 +79,7 @@ const SignUp = () => {
         }
       }
     }
-  };
-  
+  };  
   
 
   return (
@@ -170,6 +176,8 @@ const SignUp = () => {
               />
             {errors.confirmPassword && <p className="error-message">{errors.confirmPassword}</p>}
           </div>
+
+
 
           <button type="submit" className="login-button">SignUp</button>
         {errors.userExists && <p className="error-message">{errors.userExists}</p>}

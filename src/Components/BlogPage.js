@@ -12,6 +12,7 @@ function BlogPage() {
         assuranceMessage: 'We assure you that your donation will be used wisely.',
         additionalMessage: 'We understand that there are many people, organizations, seeking support.',
     },
+    
     {
         image: 'https://i.pinimg.com/originals/94/b4/2e/94b42ebae881c33e6f7006bed128c7d0.jpg',
         date: '30Jun 2023',

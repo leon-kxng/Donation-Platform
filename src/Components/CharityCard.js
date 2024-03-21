@@ -9,16 +9,18 @@ const CharityCard = ({ charity }) => {
 
   useEffect(() => {
     setLoading(true);
-    // Simulate loading delay
+      
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
-
+    
     return () => clearTimeout(timer);
   }, [charity]);
 
-  return (
-    <>
+    return (
+      
+      <>
+      
       {loading ? (
         <div className="d-flex justify-content-center mt-5">
           <Spinner animation="border" variant="primary" />
@@ -40,6 +42,7 @@ const CharityCard = ({ charity }) => {
                 overflow: 'hidden',
               }}
             />
+                        
             <div className="d-flex justify-content-between">
               <p className="card-text">
                 <strong>Goal:</strong> ${Math.ceil(charity.goal)}

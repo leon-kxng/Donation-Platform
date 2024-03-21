@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../css/AccountDetails.css";
 import { FaUser, FaEdit } from "react-icons/fa";
 
-
 const AccountDetails = ({ id }) => {
   const [accountDetails, setAccountDetails] = useState(null);
   const [loading, setLoading] = useState(true);

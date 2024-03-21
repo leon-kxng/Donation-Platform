@@ -14,7 +14,7 @@ function ContactPage() {
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
   };
-
+  
   const handlePhoneChange = (event) => {
     setPhone(event.target.value);
   };

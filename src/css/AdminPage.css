@@ -1,7 +1,5 @@
 /* AdminPage.css */
 
-
-
 .admin-page-container .sidebar {
   background-color: #00715d;
   padding: 20px;
@@ -88,5 +86,5 @@
 }
 
 .admin-carousel {
-  max-width: 500px;
+  /* max-width: 100%; */
 }

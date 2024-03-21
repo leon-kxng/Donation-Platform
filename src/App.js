@@ -59,7 +59,7 @@ function App() {
             <Route path='/blog' element={<BlogPage />} />
             <Route path="/charityform" element={<CharitySignForm />} />     
             <Route path="/adminpage" element={<AdminPage charities={charities} setCharities={setCharities}/>} /> 
-            <Route path='/Donation' element={<DonationPages />} />
+            <Route path='/donation' element={<DonationPages />} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
           <Footer />
