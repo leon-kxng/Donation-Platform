@@ -19,7 +19,7 @@
 .navbar-brand {
   color: #333;
   font-weight: bold;
-  margin-left: -150px;
+  margin-left: -45px;
 }
 
 .navbar-nav {
@@ -40,7 +40,7 @@
 
 .nav-link:first-child {
   margin-right: 20px; /* Adjusted margin for the first link (Home) */
-  margin-left: -10px;
+  /* margin-left: -10px; */
 }
 
 .nav-link:last-child {

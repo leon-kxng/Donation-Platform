@@ -8,6 +8,7 @@ import About from './Components/About';
 import CharityPage from './Components/CharityPage'
 import DonationPages from './Components/DonationPages'
 import BlogPage from './Components/BlogPage';
+import ContactUs from './Components/ContactUs'
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route path="/charityPage" element={<CharityPage />} />
           <Route path='/Donation' element={<DonationPages />} />
           <Route path='/blog' element={<BlogPage />} />
+          <Route path='/ContactUs' element={<ContactUs />} />
+
 
          
         </Routes>
