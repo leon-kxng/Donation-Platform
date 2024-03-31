@@ -1,11 +1,11 @@
 // AboutUs.js
 
-import React from 'react';
-import { BiSolidDonateHeart } from "react-icons/bi";
-import { GoArrowUpRight } from "react-icons/go";
-import { Ri24HoursFill } from "react-icons/ri";
-import { LuCircleDollarSign } from "react-icons/lu";
-import { FaBookOpen } from "react-icons/fa";
+// import React from 'react';
+// import { BiSolidDonateHeart } from "react-icons/bi";
+// import { GoArrowUpRight } from "react-icons/go";
+// import { Ri24HoursFill } from "react-icons/ri";
+// import { LuCircleDollarSign } from "react-icons/lu";
+// import { FaBookOpen } from "react-icons/fa";
 import "../css/About.css";
 
 function About() {
